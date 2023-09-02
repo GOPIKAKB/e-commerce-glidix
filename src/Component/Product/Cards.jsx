@@ -5,23 +5,25 @@ import './../../Style/Card.css'
 import { AiFillStar } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-const Cards = React.memo(({ data, addItem }) => {
+const Cards = React.memo(({ data, addItem, cart }) => {
+
     return (
-            <div className='align-card'>
-                {console.log(data)}
-                {data.map(item =>
-                    <Card key={item.id} className='card-cont' >
-                        <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
-                        <Card.Img variant="top" src={item.thumbnail} style={{height:'180px'}} loading="lazy"/>
-                        <Card.Body style={{height:'150px'}}>
+        <div className='align-card'>
+            {data.map(item =>
+                <Card key={item.id} className='card-cont' >
+                    <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
+                        <Card.Img variant="top" src={item.thumbnail} style={{ height: '180px' }} loading="lazy" />
+                        <Card.Body style={{ height: '150px' }}>
                             <Card.Title>{item.title}</Card.Title>
-                            <Card.Text>{item.rating}<AiFillStar/></Card.Text>
+                            <Card.Text>{item.rating}<AiFillStar /></Card.Text>
                             <Card.Title>${item.price}</Card.Title>
                         </Card.Body>
-                        </Link>
-                        <Button style={{backgroundColor:'#fbd351',color:'black'}} onClick={()=>addItem(item)}>Add to Cart</Button>
-                    </Card>
-                )}
+                    </Link>
+                    <Button style={{ backgroundColor: '#fbd351', color: 'black' }} onClick={() => addItem(item)}>
+                        {Boolean(cart.find(i => item.id === i.id)) ? 'Added to cart ' : 'Add to Cart'}
+                    </Button>
+                </Card>
+            )}
         </div>
     )
 })

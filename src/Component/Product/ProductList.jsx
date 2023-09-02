@@ -10,9 +10,11 @@ function ProductList() {
 
     useEffect(() => {
         axios.get('https://dummyjson.com/products').then((response) => {
-            console.log(response);
             setData(response.data.products)
         })
+        .catch((error) => {
+            console.error('Error fetching product details:', error);
+          });
     }, [])
 
     const addItem = (item) => {
@@ -38,7 +40,7 @@ function ProductList() {
     return (
         <div >
             <SearchBar  />
-            <Cards data={data} addItem={addItem} />
+            <Cards data={data} addItem={addItem} cart={cart} />
         </div>
     )
 }

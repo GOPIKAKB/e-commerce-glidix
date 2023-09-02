@@ -40,7 +40,6 @@ function Cart() {
 
     return (
         <div key="cart-item" className='cart-cntnr'>
-            {console.log(cart)}
             {total > 0 && <h2>Sub Total ({count} Items ) : ${total}</h2>}
             {total === 0 && <h2>Cart is Empty</h2>}
             {cart.map((item, index) =>
