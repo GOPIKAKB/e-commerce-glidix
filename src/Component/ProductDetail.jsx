@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './../Style/ProductDetail.css'
+import { AiFillStar } from "react-icons/ai";
+
 
 const ProductDetail = ({ }) => {
     const [product, setProduct] = useState(null);
@@ -32,6 +34,9 @@ const ProductDetail = ({ }) => {
                     <p>Brand: {product.brand}</p>
                     <p>Category: {product.category}</p>
                     <p>In Stock: {product.stock}</p>
+                    <p>{product.rating}<AiFillStar/></p>
+                    {/* <p>{product.description}</p> */}
+
                 </div>
                 <div className="image-gallery">
                     <h3>Image Gallery</h3>
