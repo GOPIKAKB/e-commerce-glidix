@@ -1,0 +1,18 @@
+.cart-cntnr {
+    margin-top: 30px;
+}
+
+.card-cntnr {
+    margin-bottom: 20px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.card-cntnr button{
+   background-color: #d9d9d9;
+}
+
+.img-cntnr {
+    display: flex;
+    align-items: center;
+}
