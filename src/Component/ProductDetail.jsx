@@ -22,7 +22,7 @@ const ProductDetail = ({ }) => {
     }
 
     return (
-        <div>
+        <div className='productdtail_cntr'>
             <div className="product-detail">
                 <div className="product-thumbnail">
                     <img src={product.thumbnail} alt={product.title} loading="lazy"/>
@@ -38,15 +38,14 @@ const ProductDetail = ({ }) => {
                     {/* <p>{product.description}</p> */}
 
                 </div>
-                <div className="image-gallery">
-                    <h3>Image Gallery</h3>
+            </div>
+            <div className="image-gallery">
                     <div className="gallery-images">
                         {product.images.map((image, index) => (
                             <img key={index} src={image} alt={`Image ${index}`} loading="lazy"/>
                         ))}
                     </div>
                 </div>
-            </div>
         </div>
     );
 };
