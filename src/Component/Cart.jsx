@@ -18,16 +18,18 @@ function Cart() {
     const decrement = (index) => {
         const newData = [...cart]
         let newCount = newData[index].count
-        newCount = newCount
-        newData[index].count = newCount - 1
+        if (newData[index].count >1) {
+            newData[index].count = newCount - 1
+        }
         setCart([...newData])
 
     }
     const increment = (index) => {
         const newData = [...cart]
         let newCount = newData[index].count
-        newCount = newCount
-        newData[index].count = newCount + 1
+        if (newData[index].count < 5) {
+            newData[index].count = newCount + 1
+        }
         setCart([...newData])
     }
     const handleDelete = (index) => {
