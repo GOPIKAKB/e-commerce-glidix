@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Cards = React.memo(({ data, addItem }) => {
     return (
             <div className='align-card'>
+                {console.log(data)}
                 {data.map(item =>
                     <Card key={item.id} className='card-cont' >
                         <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
@@ -18,7 +19,7 @@ const Cards = React.memo(({ data, addItem }) => {
                             <Card.Title>${item.price}</Card.Title>
                         </Card.Body>
                         </Link>
-                        <Button style={{backgroundColor:'#fbd351',color:'black'}} onClick={()=>addItem(item)}>Buy Now</Button>
+                        <Button style={{backgroundColor:'#fbd351',color:'black'}} onClick={()=>addItem(item)}>Add to Cart</Button>
                     </Card>
                 )}
         </div>
