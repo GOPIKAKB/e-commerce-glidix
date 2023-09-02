@@ -1,7 +1,7 @@
 .search-bar{
     text-align: end;
-    padding-right:30px;
-    padding-top: 40px;
+    margin-right:70px;
+    padding-top: 60px;
 }
 .search-bar input{
     border-radius: 5px;
@@ -11,7 +11,7 @@ button{
     color: black;
     background-color: #fbd351;
     border-radius: 5px;
-   border-color: #fbd351;
+    border-width: 0px;
 }
 @media (max-width:540px) {
     .search-bar{

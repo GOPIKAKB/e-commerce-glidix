@@ -19,8 +19,12 @@ function Header() {
       <Navbar variant="light" >
         <Container >
           <Nav className="me-auto  d-flex flex-wrap" style={{ color: '444242' }}>
-            <Nav.Link><Link to='/' style={{ textDecoration: 'none', color: 'black' }}><b>Home</b> </Link></Nav.Link>
-           
+            <Nav.Link style={{ fontFamily: 'sans-serif', fontSize: '25px' }}>
+              <Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+                <b>e-Cart</b>
+              </Link>
+            </Nav.Link>
+            {/* <Nav.Link><Link to='/' style={{ textDecoration: 'none', color: 'black' }}>Products </Link> </Nav.Link> */}
           </Nav>
           <Nav className="me-auto, justify-content-end" style={{ width: '35px', height: `${count > 0 ? '40px' : '35px'}` }} >
             <Nav.Link className='cart'>

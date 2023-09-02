@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 40px;
+    margin: 20px 40px;
     }
     .card-cont{
     width: 18rem;
     /* width: 20%; */
     box-shadow: 3px 6px 11px 5px #e7e7e7;
     border: 0px white;
-    margin-top: 30px ;
+    margin-top: 40px ;
     }
     @media (max-width:540px) {
         .align-card {
